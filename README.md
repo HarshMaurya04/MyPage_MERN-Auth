@@ -1,5 +1,3 @@
-# MyPage_MERN-Auth
-
 # MyPage - MERN Authentication 🔐
 
 🚀 **MyPage** is a secure user authentication system built using the **MERN Stack**.  
