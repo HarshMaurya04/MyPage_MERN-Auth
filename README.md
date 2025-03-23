@@ -60,3 +60,62 @@ It provides full authentication features, including **email verification, passwo
 ```sh
 git clone https://github.com/HarshMaurya04/MyPage_MERN-Auth.git
 cd MyPage_MERN-Auth
+```
+
+### **2️⃣ Backend Setup**
+```sh
+cd server
+npm install
+npm start
+```
+📌 Server will start running on: http://localhost:4000 or http://localhost:3000
+
+### **3️⃣ Frontend Setup**
+```sh
+cd client
+npm install
+npm run dev
+```
+📌 React app will run on: http://localhost:5173 (default Vite port)
+
+---
+
+## 📌 API Endpoints
+
+### 🔹 Auth Routes (`/api/auth`)
+
+| Method | Endpoint             | Description                              |
+|--------|----------------------|------------------------------------------|
+| POST   | `/register`          | Register new user                        |
+| POST   | `/login`             | User login                               |
+| POST   | `/logout`            | Logout user and clear session            |
+| POST   | `/send-verify-otp`   | Send OTP to registered email (after login) |
+| POST   | `/verify-account`    | Verify account with OTP                  |
+| GET    | `/is-auth`           | Check if user is authenticated           |
+| POST   | `/send-reset-otp`    | Send OTP for password reset              |
+| POST   | `/reset-password`    | Reset password via OTP                   |
+
+### 🔹 User Routes (`/api/user`)
+
+| Method | Endpoint   | Description               |
+|--------|-----------|---------------------------|
+| GET    | `/data`   | Get authenticated user data |
+
+
+---
+
+## 📩 Email Functionality
+
+- **Brevo SMTP Server** is used for sending emails.
+- **Nodemailer** is configured to send OTPs for verification and password reset.
+
+---
+
+## 🔒 Security Features
+
+✅ **Password Hashing** – Uses **bcrypt.js** for strong encryption  
+✅ **JWT Authentication** – Secure access with token-based authentication  
+✅ **CORS** – Allows secure cross-origin requests  
+
+
+
